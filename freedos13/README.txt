@@ -35,23 +35,22 @@ To recreate freedos13_8086.chd:
 
 To recreate freedos13.chd:
 
-* Have the ibm5170/freedos13_144 disk image set.  This can be done by
-  grabbing the floppy edition of FreeDOS from
-  https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.3/official/FD13-FloppyEdition.zip
-  and placing the 144m/* files into a ibm5170/freedos13_144 directory.
+* Have the ibm5170_cdrom/freedos13 disk image.  This can be done by
+  grabbing the CD-ROM of FreeDOS from
+  https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.3/official/FD13-LiveCD.zip
+  running “chdman createcd -i FD13LIVE.iso -o fd13live.chd”, and
+  placing this in a ROM path so MAME can find it (or specify the full
+  path to the file…).
+* Have the ibm5170/allinone disk image.  This can be done by grabbing
+  the floppy image from
+  https://schierlm.users.sourceforge.net/bootdisk/allinone.img and
+  placing it in a ROM path, like the CD-ROM image.
 * Create an empty CHD: chdman createhd -o freedos13.chd --chs 1015,16,63
-* Run MAME’s ct486 driver with these parameters:
-  mame ct486 -floppydisk1 freedos13_144 -harddisk1 ./freedos13.chd \
-       -playback freedos13.inp -nothrottle -exit_after_playback
-* Like the other image, I try to give about 15 seconds of “real time”
-  to change disk images.  This installation is *VERY SLOW* and even in
-  nothrottle mode, it is tedious.  You’ll have to keep track of which
-  floppy image you selected so you can select the correct next one.
-  With six total disks, it’s easy to get a bit confused...
-* This whole process takes about 50 minutes of real time, and what
-  feels like an eternity in nothrottle mode ;)
-
-Why so slow? FreeDOS’s install disks seem to be compressed with a
-format optimized for much newer computers than the 25MHz 486 that
-ct486 emulates.  With a dearth of good PC options in MAME, this is the
-route I must take for a reproducible disk image.
+* Run MAME’s pcipc driver with these parameters:
+  mame pcipc -floppydisk1 allinone -cdrom1 freedos13 \
+             -harddisk1 ./freedos13.chd \
+             -playback freedos13.inp -nothrottle -exit_after_playback
+* This whole process takes about 20 minutes of real time.  pcipc is
+  slow enough that nothrottle mode probably won't help much in speed,
+  but this is still faster than using ct486.  FreeDOS should boot on
+  any system that can use the hard disk.
