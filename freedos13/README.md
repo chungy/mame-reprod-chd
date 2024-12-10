@@ -12,6 +12,14 @@ pcipc BIOS inability to boot from CD-ROM images, the “allinone” floppy
 disk is used to load the El Torito CD-ROM image distributed by
 FreeDOS.
 
+With updates to MAME’s emulation in the various aspects of its code,
+these INP files may not playback correctly, or generate the same hard
+disk image, in versions that aren’t identical to the original version.
+If you find problems, first try using the exact version of MAME.
+
+ * `freedos13_8086.inp` was recorded with MAME 0.269.
+ * `freedos13.inp` was recorded with MAME 0.272.
+
 ## `freedos13_8086.chd`
 
 This is an unofficial “minimized” version of FreeDOS for the IBM 5150
