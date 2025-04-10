@@ -11,6 +11,5 @@ modifications happened to the operating system during the process.
 
 ## Upstream repository
 
-If you are reading this on GitHub, the upstream repository is hosted
-in [Fossil](https://fossil-scm.org) at
-<https://chiselapp.com/user/chungy/repository/mame-reprod-chd>.
+The upstream repository is hosted in [Fossil](https://fossil-scm.org)
+at <https://chiselapp.com/user/chungy/repository/mame-reprod-chd>.
