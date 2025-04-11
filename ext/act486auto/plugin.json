@@ -1,0 +1,10 @@
+{
+	"plugin": {
+		"name": "act486auto",
+		"description": "[ac]t486 auto config demo",
+		"version": "0.0.1",
+		"author": "sairuk",
+		"type": "plugin",
+		"start": "false"
+	}
+}
