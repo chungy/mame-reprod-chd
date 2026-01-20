@@ -49,8 +49,8 @@ generally from a clean nvram boot:
     might want to change is screen resolution, it defaults to
     1280×1024.  A smaller resolution might be more comfortable.
  5. Select `Set default environment`
- 6. Again you can press Enter through all the options.  The boot
-    partition must be set to 1 (default).
+ 6. The boot partition partition must be set to `2`.  You can press
+    enter on the other options.
  7. *Semi-optional:* select `Set time`.  The clock sometimes starts up
     with an invalid triple-digit hour and Windows NT might boot up
     thinking the date is far in the past or far in the future (I’ve
@@ -58,14 +58,15 @@ generally from a clean nvram boot:
  8. Select `Return to main menu`
  9. Select `Manage startup`
  10. Select `Add a boot selection`
- 11. Press enter for `Scsi Hard Disk 0 Partition 1`
+ 11. Press enter for `Scsi Hard Disk 0 Partition 2`
  12. Enter the osloader path.  It defaults to `\os\nt\osloader.exe`
      and this is fine for Windows NT 3.1.  Change to
      `\os\winnt351\osloader.exe` for Windows NT 3.51,
      `\os\winnt40\osloader.exe` for Windows NT 4.0.
- 13. Answer `No` to “Is the operating system in the same partition as the osloader?”
+ 13. Answer `No` to “Is the operating system in the same partition as
+     the osloader?”
  14. Select `Scsi Hard Disk` and SCSI ID `0`.  Enter the partition
-     number `2`.
+     number `1`.
  15. For Windows NT 3.1 and 4.0, the operating system directory
      `\winnt` is fine.  For Windows NT 3.51, change it to `\winnt35`.
  16. *Optional:* Enter a name for the boot selection.  It default to
