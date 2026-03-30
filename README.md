@@ -12,4 +12,4 @@ modifications happened to the operating system during the process.
 ## Upstream repository
 
 The upstream repository is hosted in [Fossil](https://fossil-scm.org)
-at <https://chiselapp.com/user/chungy/repository/mame-reprod-chd>.
+at <https://fossil.chungy.name/mame-reprod-chd>.
